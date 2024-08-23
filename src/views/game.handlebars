@@ -1,0 +1,19 @@
+<main>
+    <div class="container game-container">
+        <div class="thumb">
+            <a target="_blank" href="https://www.cheapshark.com/redirect?dealID={{data.deals.0.dealID}}">
+            <img src="{{data.info.thumb}}" alt="" class="img game-Select">
+            </a>
+        </div>
+        <div class="game-stats">
+            <h1 class="name big">{{data.info.title}}</h1>
+            <div class="price-container">
+                <span class="price">Melhor preço: ${{data.cheapestPriceEver.price}}</span>
+                <span class="price">Preço Original: ${{data.deals.0.retailPrice}}</span>
+                <a href="https://www.cheapshark.com/redirect?dealID={{data.deals.0.dealID}}" target="_blank">Comprar
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="/js/gamePage.js"></script>

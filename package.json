@@ -1,0 +1,19 @@
+{
+  "name": "sprint-2-pb-aws-ifsul-ufersa",
+  "version": "1.0.0",
+  "description": "Integrantes: Kaio Fernando, Pablo Guilherme, Pablo Lucas, Rafael Araújo, Rafael Martinho.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

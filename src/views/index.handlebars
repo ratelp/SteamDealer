@@ -1,0 +1,55 @@
+<main>
+        <div class="container">
+            <p>DESTAQUES</p>
+            <button class="arrow-left control" aria-label="Previous image"><i class="fa fa-chevron-left"></i></button>
+            <button class="arrow-right control" aria-label="Next image"><i class="fa fa-chevron-right"></i></button>
+            <div class="carousel-wrapper">
+                {{#with data}} <!-- Utiliza os dados recebidos na renderização -->
+                <div class="carousel">
+                    <div class="item current-item" id="{{0.gameID}}">
+                        <div class="thumb"><img src="{{0.thumb}}" alt="" class="carousel-thumb"></div>
+                        <div class="game-stats">
+                            <span class="name name-game-destaques">{{0.title}}</span>
+                            <span class="price">${{0.salePrice}}</span>
+                        </div>
+                    </div>
+                    <div class="item" id="{{1.gameID}}">
+                        <div class="thumb"><img src="{{1.thumb}}" alt=""  class="carousel-thumb"></div>
+                        <div class="game-stats">
+                            <span class="name name-game-destaques">{{1.title}}</span>
+                            <span class="price">${{1.salePrice}}</span>
+                        </div>
+                    </div>
+                    <div class="item" id="{{2.gameID}}">
+                        <div class="thumb"><img src="{{2.thumb}}" alt="" class="carousel-thumb"></div>
+                        <div class="game-stats">
+                            <span class="name name-game-destaques">{{2.title}}</span>
+                            <span class="price">${{2.salePrice}}</span>
+                        </div>
+                    </div>
+                    <div class="item" id="{{3.gameID}}">
+                        <div class="thumb"><img src="{{3.thumb}}" alt="" class="carousel-thumb"></div>
+                        <div class="game-stats">
+                            <span class="name name-game-destaques">{{3.title}}</span>
+                            <span class="price">${{3.salePrice}}</span>
+                        </div>
+                    </div>
+                    <div class="item" id="{{4.gameID}}">
+                        <div class="thumb"><img src="{{4.thumb}}" alt="" class="carousel-thumb"></div>
+                        <div class="game-stats">
+                            <span class="name name-game-destaques">{{4.title}}</span>
+                            <span class="price">${{4.salePrice}}</span>
+                        </div>
+                    </div>
+                    <div class="item" id="{{5.gameID}}">
+                        <div class="thumb"><img src="{{5.thumb}}" alt="" class="carousel-thumb"></div>
+                        <div class="game-stats">
+                            <span class="name name-game-destaques">{{5.title}}</span>
+                            <span class="price">${{5.salePrice}}</span>
+                        </div>
+                    </div>
+                </div>
+                {{/with}}
+            </div>
+        </div>
+    </main>

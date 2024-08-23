@@ -1,0 +1,22 @@
+<main>
+        <div class="container">
+            {{#if data}}
+            <h1>Resultados da pesquisa para "{{query}}": </h1>
+            <div class="results-container">
+                {{#each data}}
+                <div class="item" id="{{gameID}}">
+                    <div class="thumb">
+                        <img src="{{thumb}}" alt="">
+                    </div>
+                    <div class="game-stats">
+                        <h2 class="name">{{external}}</h2>
+                        <span class="price">Melhor Preço: ${{cheapest}}</span>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{else}}
+            <h1>A pesquisa "{{query}}" não obteve resultados</h1>
+            {{/if}}
+        </div>
+</main>

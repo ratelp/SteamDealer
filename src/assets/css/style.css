@@ -1,0 +1,251 @@
+:root {
+    --blue-1: #171d25;
+    --blue-2: #1d2e4b;
+    --blue-3: #1b397e;
+    --blue-4: #32689c;
+    --blue-5: #1f80d5;
+    --blue-6: #316282;
+    --blue-7: #5a99cf;
+    --green-1: #547326;
+    --green-2: #d8f213;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue-2);
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+.main-return{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+    
+}
+
+.title-container, .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--blue-1);
+}
+
+.search-container {
+    background-image: linear-gradient(to right, var(--blue-4), var(--blue-3));
+    padding: 20px;
+    gap: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search {
+    background-color: var(--blue-6);
+    padding: 7px;
+    color: #c6d4df;
+    border: none;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search::placeholder {
+    color: #c6d4df;
+}
+
+.search-btn {
+    position: absolute;
+    right: 1px;
+    background-color: var(--blue-7);
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border: none;
+}
+
+i.fa-magnifying-glass {
+    color: var(--blue-6);
+    font-size: 1rem;
+}
+
+/* ------------ Carrossel ------------- */
+
+.container {
+    position: relative;
+    padding: 15px;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.container p {
+    color: white;
+    padding-bottom: 10px;
+}
+
+.carousel-wrapper {
+    overflow-x: auto;
+}
+
+.carousel {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.current-item {
+    transform: scale(1.1);
+    margin: 0 10px;
+    width: (1.1 * 250)px;
+    height: 400px;
+}
+
+.arrow-left, .arrow-right {
+    height: 100px;
+    width: 35px;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 0;
+    right: auto;
+    transform: translate(0, -50%);
+    font-size: 20px;
+    background-image: linear-gradient(to right, var(--blue-1), var(--blue-2));
+    color: #fff;
+    border: none;
+    opacity: 0.9;
+}
+
+.arrow-right {
+    background-image: linear-gradient(to left, var(--blue-1), var(--blue-2));
+    left: auto;
+    right: 0;
+}
+
+.control:hover {
+    opacity: 1;
+    transition: all .3s;
+}
+
+.item {
+    width: 250px;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.item .thumb img {
+    width: 250px;
+    aspect-ratio: 1;
+    object-fit: fill;
+}
+
+.game-stats {
+    background-color: var(--blue-5);
+    padding: 10px 10px 20px;
+}
+
+.name {
+    color: #fff;
+    font-size: 1em;
+    padding-bottom: 15px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.name-game-destaques {
+    height: 4em;
+}
+.price {
+    background-color: var(--green-1);
+    color: var(--green-2);
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.carousel-wrapper {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* ------------------------------------ */
+
+/* Search page */
+
+.results-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
+
+.results-container .item, .results-container .thumb img {
+    width: 100%;
+}
+
+.price-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding-top: 10px;
+}
+
+.results-container .item .thumb:hover {
+    transform: scale(1.1);
+    opacity: 0.6;
+    transition: all .3s;
+}
+
+@media screen and (max-width: 1000px) {
+    .results-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .results-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .results-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  text-align: center;
+  color: #333; 
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

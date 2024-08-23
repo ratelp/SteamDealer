@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Dealer - Sprint 2</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/game.css">
+</head>
+
+<body>
+    {{# if message}}
+    <h1 class="message">{{message}}</h1>
+    {{/if}}
+    <div class="title-container">
+        <a class = "main-return" href="/">
+            <span class="logo"><img src="img/icons8-steam-50.png" alt=""></span>
+            <h1>STEAM DEALER</h1>
+        </a>
+    </div>
+    <div class="search-container">
+        <p>Procure por um jogo e encontre os melhores preços</p>
+        <div class="search-wrapper">
+            <input type="text" id="search" class="search" placeholder="procurar">
+            <button id="search-btn" class="search-btn"><i class="fa fa-magnifying-glass"></i></button> 
+      </div>
+    </div>
+    
+    {{{ body }}} <!-- Corpo do site -->
+
+    <script src="/js/carousel.js"></script>
+    <script src="/js/searchRedirect.js"></script>
+    <script src="/js/gameRedirect.js"></script>
+    <script src="https://kit.fontawesome.com/000ca87c40.js" crossorigin="anonymous"></script>
+</body>
+</html>
